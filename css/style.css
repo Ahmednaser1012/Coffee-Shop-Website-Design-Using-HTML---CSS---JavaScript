@@ -1,0 +1,767 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+  
+} 
+
+:root{
+    --main-color:#bc9667;
+    --second-color:#edeae3;
+    --text-color:#1b1b1b;
+    --bg-color:#fff;
+    --bg:#010103;
+}
+
+body{
+    background: var(--bg);
+    
+}
+
+html::-webkit-scrollbar{
+    width: .5rem;
+}
+
+html::-webkit-scrollbar-track{
+    background: transparent;
+}
+
+html::-webkit-scrollbar-thumb{
+    background: #fff;
+    border-radius: 5rem;
+}
+
+        /*************************************************/
+        /*************************************************/
+                    /* srart header */
+
+ header{
+    background-color: var(--bg);
+    width: 100%;
+    position: fixed;
+    z-index:  999;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 60px;
+ }
+ 
+ header .logo img{
+
+    /* width: 100%;  */
+    height: 4rem;
+
+ }
+
+ 
+ nav a{
+     text-decoration: none;
+     padding-left: 30px;
+     color:#ffffff;
+     font-size: 1em;
+     text-transform: uppercase;
+     font-weight:500;
+ 
+ }
+ 
+ nav a:hover{
+    color: var(--main-color);
+ }
+ 
+header .icons div{
+    color:#fff;
+    cursor: pointer;
+    font-size: 1.2rem;
+    margin-left: 2rem;
+}
+
+header .icons div:hover{
+    color:var(--main-color);
+}
+
+#menu-btn{
+    display: none;
+}
+ 
+        /*************************************************/
+        /*************************************************/
+                          /* start Main */
+
+.main{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 100px 100px;
+    background:url(../imgs/home-img.jpeg) no-repeat center;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.main h2{
+    color: #fff;
+    font-size: 3.4em;
+    font-weight: 500;
+    text-transform: uppercase;
+    margin-top: 7%;
+}
+
+.main p{
+    font-size: 2rem;
+    font-weight: 50;
+    line-height: 1.8;
+    padding:1rem 0;
+    color:#eee;
+    width: 60%;
+}
+
+.main-btn {
+    color: #fff;
+    background-color:var(--main-color);
+    text-decoration: none;
+    font-size: 1.1em;
+    font-weight: 600;
+    display: inline-block;
+    padding: 0.9375em 2.1875em; /*-----responsive-----*/
+    letter-spacing: 1px;
+    border-radius: 15px;
+    margin-bottom: 40px;
+    transition: 0.7s ease;  
+}
+
+.main-btn:hover {
+    background-color: #0a49f6;
+    transform: scale(1.1);
+    letter-spacing: .2rem;
+}
+
+
+
+
+        /*************************************************/
+        /*************************************************/
+                        /* srart About */
+
+.about{
+    padding:2rem 7%;
+}
+.about h1{
+    display: flex;
+    justify-content: center;
+    color:  #ffffff;
+    font-size: 3.2em;
+    font-weight: 800;
+    margin-bottom: 30px;
+    margin-top: 40px;
+}
+
+.about .row {
+    display: flex;
+    justify-content: center;
+    flex-direction: row; 
+    flex-wrap: nowrap;
+    background:#1b1b1b;
+}
+
+.about .row .image{
+    flex:1 1 45rem;
+}
+
+.about .row .image img{
+    width: 100%;
+}
+
+.about .row .content{
+    flex:1 1 45rem;
+    padding:1.5rem;
+    margin-top: 1%;
+}
+
+.about .row .content h3{
+    font-size: 1.5rem;
+    color:#fff;
+}
+
+.about .row .content p{
+    font-size: 1rem;
+    color:#ccc;
+    padding:0.2rem;
+    line-height: 2;
+    margin-bottom: 2%;
+}
+
+
+
+        /*************************************************/
+        /*************************************************/
+               /* srart menu section products */ 
+
+ .products h1{
+    display: flex;
+    justify-content: center;
+    color:  #ffffff;
+    font-size: 3.2em;
+    font-weight: 800;
+    margin-bottom: 30px;
+    margin-top: 40px;
+}
+
+
+/* 
+.box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap:1.5rem;
+}
+
+.box-container .box{
+    padding:5rem;
+    text-align: center;
+    border:.1rem solid rgba(255,255,255,.3); 
+} */
+
+
+.box-container{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+
+.box {
+    /*background-color: #fff;*/
+    width: 25.25em;
+    box-shadow: 0 5px 25px rgba(133, 70, 6, 0.51);
+    border-radius: 15px;
+    padding: 16px;
+    margin: 15px;
+    transition: 0.7s ease; 
+    
+} 
+
+.box:hover {
+    transform: scale(1.1);
+    background-color: #dcdcdc;
+}
+
+
+.box-container .box img{
+    height: 7rem;
+    margin-left: 8rem;
+   
+}
+ .box-container .box:hover img{
+    transform: scale(1.2);
+}
+
+.box-container .box h3{
+    color: #fff;
+    font-size: 1.5rem;
+    padding:1rem 0;
+    text-align: center;
+    text-transform: capitalize;
+}
+
+.box-container .box .price{
+    color: #fff;
+    font-size: 1.5rem;
+    padding:.2rem 0;
+    text-align: center;
+    margin-bottom: 3%;
+}
+
+.box-container .box .price span{
+    font-size: 1.5rem;
+    text-decoration: line-through;
+    font-weight: lighter;
+}
+
+
+.main-btn2 {
+    color: #fff;
+    background-color:var(--main-color);
+    text-decoration:  none;
+    font-size: 1em;
+    font-weight: 600;
+    display: inline-block;
+    padding: 0.9375em 2.1875em;/*-----responsive-----*/
+    letter-spacing: 1px;
+    border-radius: 15px;
+    margin-bottom: 10px;
+    margin-left: 6rem;
+    transition: 0.7s ease;
+   
+}
+
+.main-btn2:hover {
+    background-color: #0a49f6;
+    transform: scale(1.1);
+    letter-spacing: 0.1rem;
+}
+
+.box-container .box:hover > *{
+    color:black;
+}
+
+
+
+         /*************************************************/
+        /*************************************************/
+                     /* srart products */ 
+
+
+ 
+.box2 {
+    /*background-color: #fff;*/
+    width: 25.25em;
+    box-shadow: 0 5px 100px rgba(187, 187, 187, 0.392);
+    border-radius: 15px;
+    padding: 16px;
+    margin: 15px;
+    transition: 0.7s ease;
+} 
+
+.box2:hover {
+    transform: scale(1.1);
+}
+
+.products .box-container .box2 .image{
+    padding: .5rem 0;
+}
+
+.products .box-container .box2 .image img{
+    height: 10rem;
+    margin-left: 8.5rem;
+}
+
+.products .box-container .box2:hover .image img{
+    transform: scale(1.2);
+}
+.products .box-container .box2 .content h3{
+    color:#fff;
+    font-size: 2rem;
+    /* padding:1rem 0; */
+    text-align: center;
+    text-transform: capitalize;
+}
+
+.products .box-container .box2 .content .stars{
+    padding: .5rem;
+    margin-left: 5.5rem;
+}
+
+.products .box-container .box2 .content .stars i{
+    font-size: 1.7rem;
+    color: var(--main-color);
+}
+
+
+.products .box-container .box2 .content .price{
+    color:#fff;
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+.products .box-container .box2 .content .price span{
+    text-decoration: line-through;
+    font-weight: lighter;
+    font-size: 1rem;
+} 
+
+
+
+.products .box-container .box2 .icons a{
+    height: 2.5rem;
+    width: 4rem;
+    line-height:3rem;
+    font-size: 1rem;
+    color:#fff;
+    text-decoration: none;
+    padding-left: 22%;
+    margin:0.1rem;
+    transition: 0.7s ease;
+}
+
+.products .box-container .box2 .icons a:hover{
+    color:var(--main-color);
+    transform: scale(1.1);
+}
+
+
+         /*************************************************/
+        /*************************************************/
+                  /* srart customers review */ 
+
+ .review h1{
+    display: flex;
+    justify-content: center;
+    color:  #ffffff;
+    font-size: 3.2em;
+    font-weight: 800;
+    margin-bottom: 30px;
+    margin-top: 40px;
+}
+ 
+ .box3 {
+    /*background-color: #fff;*/
+    width: 25.25em;
+    /* box-shadow: 0 5px 100px rgba(187, 187, 187, 0.392); */
+    border:.1rem solid rgba(255,255,255,.3);
+    border-radius: 15px;
+    padding: 16px;
+    margin: 15px;
+} 
+
+
+ .review .box-container .box3 .quote{
+   height: 10%;
+  margin-left: 35%;
+ }
+
+.review .box-container .box3 p{
+    font-size: 1.5rem;
+    line-height: 2.3rem;
+    color:#a3a3a3;
+    padding:1rem 0;
+}
+
+.review .box-container .box3 .user{
+    height: 5rem;
+    width: 5rem;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-left: 9rem;
+}
+
+.review .box-container .box3 h3{
+    /* padding:rem 0; */
+    text-align: center;
+    font-size: 1rem;
+    color:#fff;
+}
+
+.review .box-container .box3 .stars{
+    /* padding: 1.5rem; */
+    margin-left: 8rem;
+    margin-bottom: 6%;
+}
+.review .box-container .box3 .stars i{
+    font-size: 1rem;
+    color:var(--main-color);
+}
+
+
+
+
+        /*************************************************/
+        /*************************************************/
+                  /* srart customers review */ 
+
+ .contact{
+    padding:2rem 8%;
+}
+ .contact h1{
+    display: flex;
+    justify-content: center;
+    color:  #cfd1d7;
+    font-size: 3.2em;
+    font-weight: 800;
+    margin-bottom: 30px;
+    margin-top: 40px;
+}
+
+.contact .row{
+    display: flex;
+    background:#13131a;
+    flex-wrap: wrap;
+    gap:1rem;
+}
+
+.contact .row .map{
+    flex:1 1 30rem;
+    width: 100%;
+    object-fit: cover;
+}
+
+.contact .row form{
+    flex:1 1 45rem;
+    padding:5rem 2rem;
+    text-align: center;
+}
+
+.contact .row form h3{
+    text-transform: uppercase;
+    font-size: 3.5rem;
+    color:#fff;
+}
+
+.contact .row form .inputBox{
+    display: flex;
+    align-items: center;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    background:#010103;
+    border:.2rem solid rgba(255,255,255,.3);
+}
+
+.contact .row form .inputBox span{
+    color:#fff;
+    font-size: 1.5rem;
+    padding: 1rem;
+}
+
+.contact .row form .inputBox input{
+    width: 100%;
+    padding:1rem;
+    font-size: 1.5rem;
+    color:#fff;
+    text-transform: none;
+    background:none;
+}
+
+
+
+        /*************************************************/
+        /*************************************************/
+                      /* srart footer  */ 
+
+.footer{
+    background:#13131a;
+    text-align: center;
+}
+
+.footer .share{
+    padding:1rem ;
+}
+
+.footer .share a{
+    height: 4rem;
+    width: 4rem;
+    line-height: 4rem;
+    font-size: 1.5rem;
+    color:#fff;
+    border:.1rem solid rgba(255,255,255,.3);
+    margin:.5rem;
+    border-radius: 50%;
+    text-decoration: none;
+}
+
+ /* .footer .share:hover a{
+    transform: scale(1.2);
+} */
+
+.footer .share a:hover{
+    background-color: var(--main-color);
+}
+
+
+.footer .credit{
+    font-size: 2rem;
+    color:#fff;
+    font-weight: lighter;
+    padding:1.5rem;
+}
+
+.footer .credit span{
+    color:var(--main-color);
+}
+
+
+
+
+
+
+        /*************************************************/
+        /*************************************************/
+                   /* srart media query */ 
+
+
+
+/*
+    @media (max-width:1023px){
+    }
+    @media (max-width:641px){   
+    }
+    @media (max-width:330px){
+    }
+*/
+
+@media (max-width:991px){
+
+     html{
+        font-size: 40%;
+        
+    }
+
+
+    section{
+        padding:2rem;
+      
+    } 
+        /* .about{
+            padding:0.9rem ;
+            background-color: #1f1fad;
+        } */
+    .about .row {
+        background:#090909;
+    }
+        /*     
+        .about .row .image{
+            flex:1 1 40rem;
+        }
+
+        .about .row .content{
+            flex:1 1 45rem;
+            padding:1.5rem;
+        }
+
+        .about .row .content h3{
+            font-size: 3.5rem;
+            color:#fff;
+        }
+
+        .about .row .content p{
+            font-size: 2rem;
+            padding:0.2rem;
+        } */
+
+    .main-btn2 { 
+        margin-left: 4rem;
+    }
+
+        
+    .box-container .box img{
+        height: 7rem;
+        margin-left: 7rem;
+    
+    }
+    
+    .products .box-container .box2 .image img{
+        margin-left: 7.5rem;
+    }
+
+    .products .box-container .box2 .content .stars{
+        margin-left: 4.5rem;
+    }
+    
+
+    .review .box-container .box3 .user{
+    
+        margin-left: 7.5rem;
+    }
+
+
+    .review .box-container .box3 .stars{
+        margin-left: 6.5rem;
+
+    }
+
+}
+
+@media (max-width:768px){
+
+    #menu-btn{
+        display: inline-block;
+    }
+
+            /* java script */
+                /* header nav{
+                    position: absolute;
+                    top:100%; right: -100%;
+                    background-color: #983333;
+                    width: 30rem;
+                    height: calc(100vh - 9.5rem);
+                } 
+
+                /* header nav a{
+                    color:var(--black);
+                    display: block;
+                    margin:1.5rem;
+                    padding:.5rem;
+                    font-size: 2rem;
+                } */
+            /****************** */
+   
+    .main{
+        justify-content: center;
+        text-align: center;
+    }
+
+    .main  h2{
+        font-size: 4.5rem;
+        width: 100%;
+    }
+
+    .main  p{
+        font-size: 2.5rem;
+        margin-left: 1rem;
+        width: 100%;
+    }
+
+    
+}
+
+@media (max-width:552px){
+   
+    
+    header{
+        padding:1rem 2rem;
+        
+    }
+     header nav a{
+        margin:0.1rem;
+        padding:.5rem;
+    } 
+    .about .row .image img{
+        margin-top: 10%;
+    }
+   
+}
+
+@media (max-width:376px){
+
+    .main  h2{
+        font-size: 2.4rem;
+    }
+
+    .main  p{
+        font-size: 1.7rem;
+        margin-left: 0.5rem;
+
+    }
+        
+    .about .row .content p{
+        font-size: 0.5rem;
+        padding:0.2rem;
+} 
+
+}
+
+
+
+@media (max-width:324px){
+    
+    header{
+        padding:0.1rem 0.5rem;
+        
+    }
+     header nav a{
+        margin:0.1rem;
+        padding:.2rem;
+    } 
+    .main  h2{
+        font-size: 2rem;
+    }
+    .main  p{
+        font-size: 1rem;
+   
+
+    }
+}
+
